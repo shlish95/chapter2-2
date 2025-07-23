@@ -1,4 +1,4 @@
-package com.project.inserfaces;
+package com.project.interfaces;
 
 import com.project.domain.entity.Users;
 

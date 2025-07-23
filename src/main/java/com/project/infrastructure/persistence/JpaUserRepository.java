@@ -1,7 +1,7 @@
 package com.project.infrastructure.persistence;
 
 import com.project.domain.entity.Users;
-import com.project.inserfaces.UserRepositoryInterface;
+import com.project.interfaces.UserRepositoryInterface;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

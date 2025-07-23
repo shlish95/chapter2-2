@@ -2,7 +2,7 @@ package com.project.application;
 
 import com.project.domain.entity.Users;
 import com.project.domain.usecase.CreateUserUseCase;
-import com.project.inserfaces.UserRepositoryInterface;
+import com.project.interfaces.UserRepositoryInterface;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
