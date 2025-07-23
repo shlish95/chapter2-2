@@ -34,4 +34,10 @@ public class Users {
     public String getPassword() { return password; }
     public int getBalance() { return balance; }
     public LocalDateTime getCreateAt() { return createAt; }
+
+    public void charge(int amount) {
+        this.balance += amount;
+    }
+
+
 }
