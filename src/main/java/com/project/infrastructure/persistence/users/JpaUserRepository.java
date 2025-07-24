@@ -1,4 +1,4 @@
-package com.project.infrastructure.persistence;
+package com.project.infrastructure.persistence.users;
 
 import com.project.domain.entity.Users;
 import com.project.interfaces.UserRepositoryInterface;
