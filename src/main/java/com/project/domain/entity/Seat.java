@@ -22,4 +22,7 @@ public class Seat {
         this.price = price;
     }
 
+    public Long getSeatId() {
+        return seatId;
+    }
 }

@@ -25,4 +25,28 @@ public class Reservation {
         this.reservedAt = reservedAt;
         this.expiresAt = expiresAt;
     }
+
+    public Long getReservationId() {
+        return reservationId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public Long getConcertId() {
+        return concertId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public LocalDateTime getReservedAt() {
+        return reservedAt;
+    }
+
+    public LocalDateTime getExpiresAt() {
+        return expiresAt;
+    }
 }

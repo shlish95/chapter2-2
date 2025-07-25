@@ -1,12 +1,14 @@
-package com.project.infrastructure.persistence.reservationLookup;
+package com.project.infrastructure.persistence.seat;
 
 import com.project.domain.dto.SeatInfo;
+import com.project.domain.entity.Seat;
 import com.project.interfaces.SeatRepositoryInterface;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -17,5 +19,10 @@ public class JpaSeatRepository implements SeatRepositoryInterface {
     @Override
     public List<SeatInfo> findAvailableSeatsByDate(LocalDate date) {
         return repo.findAvailableSeatsByDate(date);
+    }
+
+    @Override
+    public Optional<Seat> findByConcertIdAndSeatNum(Long concertId, int seatNum) {
+        return repo.findByConcertIdAndSeatNum(concertId, seatNum);
     }
 }

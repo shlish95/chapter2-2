@@ -24,4 +24,7 @@ public class Concert {
     }
 
 
+    public Long getConcertId() {
+        return concertId;
+    }
 }

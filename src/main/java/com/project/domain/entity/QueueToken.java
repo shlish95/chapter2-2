@@ -28,4 +28,6 @@ public class QueueToken {
     public String getUserUuid() { return userUuid; }
 
     public int getQueuePosition() { return queuePosition; }
+
+    public Long getUserId() { return userId; }
 }
