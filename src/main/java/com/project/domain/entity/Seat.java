@@ -25,4 +25,8 @@ public class Seat {
     public Long getSeatId() {
         return seatId;
     }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
 }

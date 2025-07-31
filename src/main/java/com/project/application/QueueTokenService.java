@@ -10,11 +10,10 @@ import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
-public class QueueTokenService implements QueueTokenUseCase {
+public class QueueTokenService {
 
     private final QueueTokenRepositoryInterface tokenRepository;
 
-    @Override
     public QueueToken issue(String userUuid) {
         int position = tokenRepository.nextQueuePosition();
         LocalDateTime now = LocalDateTime.now();
@@ -23,7 +22,6 @@ public class QueueTokenService implements QueueTokenUseCase {
         return tokenRepository.save(queueToken);
     }
 
-    @Override
     public QueueToken getStatus(String userUuid) {
         return tokenRepository.findByUserUuid(userUuid)
                 .orElseThrow(() -> new IllegalArgumentException("토큰이 없습니다: " + userUuid));

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class ReserveSeatService implements ReserveSeatUseCase {
+public class ReserveSeatService {
 
     private final QueueTokenRepositoryInterface tokenRepo;
     private final ConcertRepositoryInterface concertRepo;
@@ -21,8 +21,6 @@ public class ReserveSeatService implements ReserveSeatUseCase {
     private final ReservationRepositoryInterface reservationRepo;
     private final ReservationSeatRepositoryInterface reservationSeatRepo;
 
-
-    @Override
     public Reservation reserve(String userUuid, LocalDate date, int seatNum) {
         // 1) 토큰 검증
         QueueToken token = tokenRepo.findByUserUuid(userUuid)

@@ -24,6 +24,9 @@ public class QueueToken {
         this.expiresAt = expiresAt;
     }
 
+    public void expireNow() {
+        this.expiresAt = LocalDateTime.now();
+    }
 
     public String getUserUuid() { return userUuid; }
 

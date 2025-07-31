@@ -32,4 +32,13 @@ public class JpaQueueTokenRepository implements QueueTokenRepositoryInterface {
     public Optional<QueueToken> findByUserUuid(String userUuid) {
         return tokenRepo.findByUserUuid(userUuid);
     }
+
+    @Override
+    public void expire(String userUuid) {
+        tokenRepo.findByUserUuid(userUuid)
+                .ifPresent(token -> {
+                    token.expireNow();
+                    tokenRepo.save(token);
+                });
+    }
 }

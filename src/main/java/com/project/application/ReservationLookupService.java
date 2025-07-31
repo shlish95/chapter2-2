@@ -12,17 +12,15 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ReservationLookupService implements ReservationLookupUseCase {
+public class ReservationLookupService {
 
     private final ConcertRepositoryInterface concertRepo;
     private final SeatRepositoryInterface seatRepo;
 
-    @Override
     public List<LocalDate> getAvailableDates() {
         return concertRepo.findDistinctDates();
     }
 
-    @Override
     public List<SeatInfo> getAvailableSeats(LocalDate date) {
         return seatRepo.findAvailableSeatsByDate(date);
     }

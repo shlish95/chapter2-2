@@ -25,4 +25,9 @@ public class JpaSeatRepository implements SeatRepositoryInterface {
     public Optional<Seat> findByConcertIdAndSeatNum(Long concertId, int seatNum) {
         return repo.findByConcertIdAndSeatNum(concertId, seatNum);
     }
+
+    @Override
+    public Optional<Seat> findById(Long seatId) {
+        return repo.findById(seatId);
+    }
 }

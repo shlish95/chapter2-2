@@ -17,4 +17,12 @@ public class ReservationSeatId implements Serializable {
         this.reservationId = reservationId;
         this.seatId = seatId;
     }
+
+    public Long getReservationId() {
+        return reservationId;
+    }
+
+    public Long getSeatId() {
+        return seatId;
+    }
 }

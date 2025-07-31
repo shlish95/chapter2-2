@@ -20,4 +20,16 @@ public class ReservationSeat {
         this.id = new ReservationSeatId(reservationId, seatId);
         this.expiresAt = expiresAt;
     }
+
+    public ReservationSeatId getId() {
+        return id;
+    }
+
+    public LocalDateTime getExpiresAt() {
+        return expiresAt;
+    }
+
+    public Long getSeatId() {
+        return id.getSeatId();
+    }
 }

@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import static org.assertj.core.api.Assertions.*;
@@ -30,7 +31,7 @@ class CreateUserServiceTest {
         //given
         String name = "testName";
         String password = "testPassword";
-        Users user = new Users(1L, name, password, 0, LocalDateTime.now());
+        Users user = new Users(1L, name, password, BigDecimal.ZERO, LocalDateTime.now());
 
         given(userRepo.save(any(Users.class))).willReturn(user);
 

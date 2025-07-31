@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface SeatRepositoryInterface {
     List<SeatInfo> findAvailableSeatsByDate(LocalDate date);
     Optional<Seat> findByConcertIdAndSeatNum(Long concertId, int seatNum);
+    Optional<Seat> findById(Long seatId);
 }

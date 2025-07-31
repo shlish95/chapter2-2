@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface SpringDataReservationSeatRepository extends JpaRepository<ReservationSeat, ReservationSeatId> {
 
     @Query("""
@@ -15,4 +17,5 @@ public interface SpringDataReservationSeatRepository extends JpaRepository<Reser
           AND r.expiresAt > CURRENT_TIMESTAMP 
         """)
     boolean existsHold(@Param("seatId") Long seatId);
+    List<ReservationSeat> findByReservationId(Long reservationId);
 }
